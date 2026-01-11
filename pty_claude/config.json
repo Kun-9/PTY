@@ -1,0 +1,15 @@
+{
+  "PreToolUse": {
+    "enabled": true,
+    "tools": ["AskUserQuestion"]
+  },
+  "Stop": {
+    "enabled": true
+  },
+  "PermissionRequest": {
+    "enabled": true
+  },
+  "Notification": {
+    "enabled": false
+  }
+}

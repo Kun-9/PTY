@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pty-claude-code"
+version = "0.1.0"
+description = "PTY wrapper for Claude Code with customizable hook notifications"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "kun"}
+]
+keywords = ["claude", "pty", "notification", "hook"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: MacOS",
+]
+
+[project.scripts]
+pty-claude = "pty_claude:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pty_claude*"]
+
+[tool.setuptools.package-data]
+pty_claude = ["config.json"]
+
+[project.optional-dependencies]
+dev = ["black", "flake8", "mypy"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
